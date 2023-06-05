@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Result Processing</title>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/html2canvas.min.js" defer></script>
+    <script src="js/jspdf.min.js" defer></script>
+    <script src="js/jspdf.plugin.autotable.min.js" defer></script>
+    <script src="js/imagesURIs.js" defer></script>
+    <script src="js/basics.js" defer></script>
+    <script src="js/selection.js" defer ></script>
+    <script src="js/selected.js" defer></script>
+    <script src="js/fields.js" defer></script>
+    <script src="js/scores.js" defer></script>
+    <script src="js/result.js" defer></script>
+    <!-- <link rel="stylesheet" href="css/milligram.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--Main content-->
+    <div class="content">
+      <!--The user will be prompted to enter some information-->
+      <div class="basic-information">
+        <h3>Enter some basic information</h3>
+        <div class="fields">
+          <label for="student-name-field">Enter the student name:</label>
+          <input name-field id="student-name-field" type="text" placeholder="Name here...">
+          <label for="student-class">Select the student class:</label>
+          <select class-field id="student-class">
+            <optgroup label="Primary classes">
+              <option>Primary 1</option>
+              <option>Primary 2</option>
+              <option>Primary 3</option>
+              <option>Primary 4</option>
+              <option>Primary 5</option>
+              <option>Primary 6</option>
+            </optgroup>
+            <optgroup label="JSS classes">
+              <option>JSS 1</option>
+              <option>JSS 2</option>
+              <option>JSS 3</option>
+            </optgroup>
+          </select>
+        </div>
+        <h4>Select the examination term</h4>
+        <input term type="radio" id="first" name="term">
+        <label term-label for="first">First term</label> <br>
+        <input term type="radio" id="second" name="term">
+        <label term-label for="second">Second term</label> <br>
+        <input term type="radio" id="third" name="term">
+        <label term-label for="third">Third term</label><br>
+        <button save-information type="button">Continue</button>
+      </div>
+      <!--Available subjects will show in this section. The use will check the checkboxes to select the subjects-->
+      <div class="subjects-selection" hidden>
+        <h2>Select the subjects</h2>
+        <div class="checkboxes">
+
+        </div>
+        <button save-selected-subjects type="button">Continue</button>
+      </div>
+      <!--The user will then confirm the selected subjects. The previous section can be revisited if any change 
+      in the subjects selection is needed.-->
+      <div class="selected-subjects" hidden>
+        <h2>Confirm the selected subjects</h2>
+        <div class="all-selected-subjects">
+
+        </div>
+        <button confirm-selection type="button">Confirm</button>
+        <button go-back-to-selection type="button">Go back</button>
+      </div>
+      <!--Based on the selected subjects, number fields will be provided where the user can enter the
+      the score for each subject that is being selected.-->
+      <div class="scores-input" hidden>
+        <h2>Enter the score for each subject</h2>
+        <div class="text-fields">
+
+        </div>
+        <button save-scores type="button">Continue</button>
+      </div>
+      <!--The subjects together with their scores will be shown for review. The previous section can be revisited
+      if the user needs to correct some scores.-->
+      <div class="subjects-scores" hidden>
+        <h2>Confirm the scores</h2>
+        <div class="scores">
+
+        </div>
+        <button confirm-scores type="button">Confirm</button>
+        <button go-back-to-fields type="button">Go back</button>
+      </div>
+      <!--This is the final section of the application. The result is previewed in this section
+      and can be downloaded.-->
+      <div class="result-preview" hidden>
+        <div class="the-result">
+          <center><img class="logo" src="img/Logo.png" alt="Not found">
+          <h2>SCHOOL NAME</h2></center>
+          <div class="details">
+            <p>Name: <span class="student-name bold"></span></p>
+            <p>Class: <span class="student-class bold"></span></p>
+            <p>Number of students: <span class="population bold">45</span></p>
+            <p>Examination Term: <span class="examination-term bold"></span></p>
+            <p>Vacation date: <span class="school-vacation bold">06-05-2023</span></p>
+            <p>Resumption date: <span class="resumption-date bold">08-06-2023</span></p>
+          </div>
+          <table width="100%" border='1'>
+
+          </table>
+          <p>Total: <span class="bold total-score"></span></p>
+          <p>Average: <span class="bold average"></span></p>
+          <p>Signature and date</p>
+          <p>___________________</p>
+        </div>
+          <button data-download type="button">Download</button>
+          <button data-finish type="button">Go Back</button>
+      </div>
+    </div>
+    <iframe src="result.html" hidden></iframe>
+  </body>
+</html>
