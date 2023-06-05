@@ -3,7 +3,7 @@ GitHub Repo: https://github.com/aminunawwarah/Result-Processing-Project
 Application Version: 1.0.0
 About:
 
-This is project is an application is serves as a tool for processing students' examination results. But why this
+This project is an application that serves as a tool for processing students' examination results. But why this
 application? One may say that Microsoft Excel can be used for similar task. Yes, but this application has some
 features that Microsoft Excel does not provide. I am a school teacher and I know how cumbersome it is to process
 students results. One has to sit for several hours with a calculator and sometimes it takes days to complete. This 
