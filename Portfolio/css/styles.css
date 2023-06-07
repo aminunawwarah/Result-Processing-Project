@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+body {
+    width: 100%;
+    padding-bottom: 1.7%;
+}
+
+header, .navigation-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    box-shadow: 0 2px 8px #333333;
+    padding: 10px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid #710390;
+    border-radius: 54px;
+    margin-top: 1%;
+    width: 190px;
+    height: 40px;
+    transition: 0.7s ease;
+    cursor: pointer;
+    box-shadow: 0 7px 8px #333333;
+}
+
+button > a[target="_blank"]:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+button:hover {
+    background: #710390;
+    color: #FFFFFF;
+    box-shadow: 0 0 8px #710390;
+}
+
+img {
+    margin: 2% 0;
+}
+
+a {
+    font-family: Poppins;
+    color: #333333;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a[target="_blank"]:hover {
+    color: #993079;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: 40px;
+}
+
+.link:hover {
+    border-top: #993079 2px solid;
+    border-bottom: #993079 2px solid;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.9s ease;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: animateRight 0.7s linear;
+}
+
+.navigation-links {
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    animation: animateDown 0.7s linear;
+}
+
+.cover-image {
+    width: 100%;
+    height: 90vh;
+    background-image: url('../imgs/computers.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 7px 8px #333333;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    width: 70%;
+    padding: 2%;
+    margin-top: 4%;
+}
+
+.heading-text {
+    font-size: 2.3rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.greeting-text {
+    font-size: 1.7rem;
+}
+
+.my-name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.dynamic, .dynamic-text {
+    font-family: Poppins;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #791286
+}
+
+.dynamic {
+    color: #000;
+    font-weight: normal;
+}
+
+.text-content {
+    margin: 1.6% 0;
+    font-size: 1.4rem;
+}

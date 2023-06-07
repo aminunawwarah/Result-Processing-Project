@@ -14,7 +14,7 @@ var grade;
 
 //Download the result 
 function download() {
-  alert('To be completed soon..');
+  alert('Still under development...');
 }
 //Calculate the total score and the average
 function calculate() {

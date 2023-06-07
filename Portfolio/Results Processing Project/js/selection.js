@@ -4,7 +4,7 @@ const saveSelectionButton = document.querySelector('[save-selected-subjects]');
 //The 'subjecst' array is an array of the subjects that the user can select.
 var subjects = ['Agricultural Science', 'Arabic Language', 'Basic Science','Business Studies', 'Basic Technology',
                 'Computer Studies', 'English Language', 'Cultural and Creative Arts','Home Economics',
-                'Mathematics', 'Physical and Health Education', 'Social Studies'];
+                'Mathematics', 'Physical and Health Education', 'Social Studies', 'Introductory Technology'];
 
 var selectedSubjects = [];
 var checkboxes = [];
@@ -41,9 +41,9 @@ createCheckBoxes();
 
 saveSelectionButton.addEventListener('click', function() {
   saveSelectedSubjects();
-  //Ensures that at least 5 subjects are selected and not more than 8
-  if (selectedSubjects.length < 5 || selectedSubjects.length > 8) {
-    alert('Please select a minimum of 5 subjects and a maximum of 8 subjects.');
+  //Ensures that at least 8 subjects are selected and not more than 10
+  if (selectedSubjects.length < 8 || selectedSubjects.length > 10) {
+    alert('Please select a minimum of 8 subjects and a maximum of 10 subjects.');
   } else {
     $(function() {
       $('.subjects-selection').hide();

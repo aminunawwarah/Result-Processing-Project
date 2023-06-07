@@ -26,13 +26,14 @@ saveInfoButton.addEventListener('click', function() {
 
   //Ensures student name is entered, the class is selected, and the examination term is selected
   if (!studentName || !studentClass || !examinationTerm) {
-    alert("Please, fill in all the fields and select the examination term.");
+    alert("Please fill in all the fields and select the examination term.");
   }
   //Moves to the next section
   else {
     $(function() {
       $('.basic-information').hide();
       $('.subjects-selection').show(600);
+      nameField.value = '';
     })
   }
 })
