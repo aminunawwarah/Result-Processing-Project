@@ -16,7 +16,6 @@ header, .navigation-links{
 }
 
 header {
-    box-shadow: 0 2px 8px #333333;
     padding: 10px;
 }
 
@@ -74,13 +73,18 @@ li {
 
 .hidden {
     opacity: 0;
-    transition: 0.9s ease;
+    transition: 0.8s ease;
     transform: translateX(-100%);
 }
 
 .show {
     opacity: 1;
     transform: translateX(0);
+}
+
+.gallery-photo.show {
+    opacity: 1;
+    animation: appear 0.5s linear;
 }
 
 .logo {
@@ -107,6 +111,7 @@ li {
     justify-content: center;
     align-items: center;
     box-shadow: 0 7px 8px #333333;
+    animation: appear 0.6s linear;
 }
 
 .main-content {
@@ -138,13 +143,15 @@ li {
 .my-name {
     font-size: 4rem;
     font-weight: bold;
+    animation: animateLeft 1s linear;
 }
 
 .dynamic, .dynamic-text {
     font-family: Poppins;
     font-size: 3.6rem;
     font-weight: bold;
-    color: #791286
+    color: #791286;
+    animation: animateUp 1s linear;
 }
 
 .dynamic {
@@ -155,4 +162,39 @@ li {
 .text-content {
     margin: 1.6% 0;
     font-size: 1.4rem;
+}
+
+.pic {
+    width: 180px;
+    height: auto;
+}
+
+#pictures {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.css {
+    transition-delay: 0.4s;
+}
+
+.js {
+    transition-delay: 0.7s;
+}
+
+.react {
+    transition-delay: 1s;
+}
+
+.gallery-photo {
+    width: 450px;
+    height: 250px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 450px 450px;
+    grid-template-rows: 250px 250px;
+    row-gap: 10px;
+    column-gap: 10px;
 }

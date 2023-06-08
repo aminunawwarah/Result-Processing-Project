@@ -28,10 +28,10 @@ saveScoresButton.addEventListener('click', function(){
 
   //Checks to see if there is any score over 100
   var response = scores.some(function(score) {
-    return score > 100;
+    return (score > 100 || score < 0);
   });
   //Prompt the user to ensure that no score is over 100
-  if (response) alert('Please make sure that no score is greater than 100.');
+  if (response) alert('Please make sure that no score is greater than 100 or less than 0.');
   else {
     $(function() {
       $('.scores-input').hide();

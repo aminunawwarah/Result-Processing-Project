@@ -20,4 +20,4 @@ var listeners = new IntersectionObserver((items) => {
 
 hiddenElements.forEach((element) => {
     listeners.observe(element);
-})
+});
