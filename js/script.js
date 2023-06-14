@@ -1,9 +1,12 @@
+/*
+* A text animation showing some text
+*/
 var typeAnimation = new Typed('.dynamic-text', {
-    strings: ['a student at Holberton School.', 'proud of Holberton School.', 'learning how to code.', 
+    strings: ['a student at ALX.', 'proud of ALX.', 'learning how to code.', 
     'learning Front-end technologies.'],
     loop: true,
     typeSpeed: 50,
-    backSpeed: 100,
+    backSpeed: 130,
     backDelay: 0.9
 });
 

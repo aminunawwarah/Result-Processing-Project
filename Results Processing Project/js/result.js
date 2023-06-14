@@ -14,7 +14,34 @@ var grade;
 
 //Download the result 
 function download() {
-  alert('Still under development...');
+  var file = new jsPDF();
+    
+  file.addImage(logo, 10, 10, 50, 50);
+  file.setFontSize(30);
+  file.text('NAWWARAH ACADEMY', 66, 20);
+  file.setFontSize(25);
+  file.text('The right environment for Learning', 66, 35);
+  file.setFontSize(10);
+  file.text('Phone: 123-456-789', 66, 45);
+  file.text('Email: nawwarahacademy@edu.ln', 66, 50);
+  file.setFontSize(15);
+  file.text(`Student Name:  ${studentName}`, 15, 70);
+  file.text(`Student Class: ${studentClass}`, 15, 80);
+  file.text(`Examination Term: ${examinationTerm}`, 15, 90);
+  file.autoTable({
+      head: [['Subjects', 'Scores', 'Grades']],
+      body: tableRows,
+      startY: 110,
+      theme: 'grid',
+      styles: {
+          fontSize: 16,
+          halign: 'left',
+          valign: 'middle'
+      }
+  });
+  file.text(`Total Score: ${total}`, 15, 240);
+  file.text(`Average: ${average}`, 15, 250);
+  file.save(`${studentName}.pdf`);
 }
 //Calculate the total score and the average
 function calculate() {
@@ -26,6 +53,7 @@ function calculate() {
   average = total / selectedSubjects.length;
 }
 
+//Create the content of the table for the PDF file
 function createTableContent() {
   tableRows = [];
   for (var i = 0; i < selectedSubjects.length; i++) {
@@ -40,6 +68,7 @@ function createTableContent() {
   }
 }
 
+//Assign grades based on the value passed to the function
 function assignGrade(index) {
   if (scores[index] < 50) grade = 'F';
     else if ((scores[index] >= 50) && (scores[index] < 60)) grade = 'C';
@@ -82,6 +111,7 @@ function showResult() {
   calculate();
 }
 
+//Retrive some information to be used in the result preview and the  PDF file
 function retrieveInformation() {
   document.querySelector('.student-name').innerHTML = `${studentName}`;
   document.querySelector('.student-class').innerHTML = `${studentClass}`;
@@ -90,6 +120,7 @@ function retrieveInformation() {
   document.querySelector('.average').innerHTML = average;
 }
 
+//Go back process a new result 
 finishButton.addEventListener('click', function() {
   $(function() {
     $('.result-preview').hide();
@@ -97,6 +128,7 @@ finishButton.addEventListener('click', function() {
   })
 });
 
+//Download the file
 downloadButton.addEventListener('click', function() {
   createTableContent();
   download();

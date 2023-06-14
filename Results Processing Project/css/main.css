@@ -1,8 +1,9 @@
 body {
-  display: flex;
-  justify-content: center;
-  height: 90vh;
   font-family: Poppins;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 input[type='text'],
@@ -92,10 +93,9 @@ p {
 .scores-input,
 .subjects-scores,
 .result-preview {
-  border: 2px #650780 solid;
+  border: 2px #610869 solid;
   border-radius: 4px;
   padding: 20px;
-  box-shadow: 0 0 10px #412549;
 }
 
 .bold {

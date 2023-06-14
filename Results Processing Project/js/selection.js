@@ -11,7 +11,7 @@ var checkboxes = [];
 var labels = [];
 var numberOfSubjects = subjects.length;
 
-//Checkboxes will be created with each containing a label with the subjects available for selection
+//Checkboxes will be created, each containing a label with the subjects available for selection
 function createCheckBoxes() {
   for (var i = 0; i < numberOfSubjects; i++) {
     subjectSelectionSection.innerHTML += `<input data-checkbox type="checkbox" id="${i}">
@@ -22,7 +22,7 @@ function createCheckBoxes() {
   labels = subjectSelectionSection.querySelectorAll('label');
 }
 
-//Saves the selected subjects.
+//Save the selected subjects.
 //Before proceeding to the scores part, a preview of the selected subjects will be shown
 function saveSelectedSubjects() {
   selectedSubjects = [];
@@ -31,7 +31,7 @@ function saveSelectedSubjects() {
       selectedSubjects[i] = labels[i].innerHTML;
     }
   }
-  //Filters out only the selected subjects
+  //Filter out only the selected subjects
   selectedSubjects = selectedSubjects.filter(subject => {
     return (subject != undefined)
   });
@@ -41,9 +41,9 @@ createCheckBoxes();
 
 saveSelectionButton.addEventListener('click', function() {
   saveSelectedSubjects();
-  //Ensures that at least 8 subjects are selected and not more than 10
-  if (selectedSubjects.length < 8 || selectedSubjects.length > 10) {
-    alert('Please select a minimum of 8 subjects and a maximum of 10 subjects.');
+  //Ensure that 10 subjects are selected
+  if (selectedSubjects.length !== 10) {
+    alert('Please select 10 subjects.');
   } else {
     $(function() {
       $('.subjects-selection').hide();
