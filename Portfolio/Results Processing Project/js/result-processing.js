@@ -83,9 +83,8 @@ function createResultTable(index) {
         var rows = document.createElement('tr');
         
         assignGrades(records[index].examinationScores[i]);
-        sumScores(index);
 
-        for (var j = 0; j < 3; j++) {
+        for (var j = 0; j < 3; j++) {    
             tableData[j] = document.createElement('td');
             rows.appendChild(tableData[j]);
         }
@@ -104,7 +103,8 @@ function createResultTable(index) {
     resultTable.appendChild(tableBody);
     studentsResultsSection.appendChild(nameText);
     studentsResultsSection.appendChild(resultTable);
-    showSum();
+    sumScores(index);
+    showSum(arrayIndex);
     createButton();
 }
 
@@ -139,7 +139,7 @@ function createFileTableContent(index) {
     for (var i = 0; i < records[index].subjectsOffered.length; i++) {
       tableDataContent = [];
   
-      sumScores(index);
+      assignGrades(records[index].examinationScores[i]);
       tableDataContent[0] = records[index].subjectsOffered[i];
       tableDataContent[1] = records[index].examinationScores[i];
       tableDataContent[2] = subjectGrade;
