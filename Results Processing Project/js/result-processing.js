@@ -154,11 +154,13 @@ function downloadCurrentResult(index) {
     
     createFileTableContent(index);
     file.addImage(logo, 10, 10, 50, 50);
+    file.setFont('Nunito-Bold');
     file.setFontSize(30);
     file.text('NAWWARAH ACADEMY', 66, 20);
-    file.setFontSize(25);
-    file.text('The right environment for Learning', 66, 35);
+    file.setFontSize(23);
+    file.text('The Right Environment for Learning', 66, 35);
     file.setFontSize(10);
+    file.setFont('Nunito-Regular');
     file.text('Phone: 123-456-789', 66, 45);
     file.text('Email: nawwarahacademy@edu.ln', 66, 50);
     file.setFontSize(15);
@@ -171,9 +173,24 @@ function downloadCurrentResult(index) {
         startY: 110,
         theme: 'grid',
         styles: {
-            fontSize: 16,
-            halign: 'left',
-            valign: 'middle'
+            font: 'Poppins-Regular',
+            fontStyle: 'normal',
+            fontSize: 16
+        },
+        headStyles: {
+            fillColor: [155, 100, 170],
+            halign: 'center'
+        },
+        columnStyles: {
+            0: {
+                halign: 'left'
+            },
+            1: {
+                halign: 'center'
+            },
+            2: {
+                halign: 'center'
+            }
         }
     });
     file.text(`Total Score: ${sum}`, 15, 240);

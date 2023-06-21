@@ -46,6 +46,10 @@ button:hover {
     border-radius: 55px;
 }
 
+li:hover {
+    color: #906308;
+}
+
 .access-button {
     background: #CCCCCC;
     font-family: inherit;
