@@ -70,7 +70,7 @@ function createResultTable(index) {
     var nameText = document.createElement('p'); 
     var tableData = [];
 
-    resultTable.setAttribute('width', '90%');
+    resultTable.setAttribute('width', '100%');
     resultTable.setAttribute('border', '1');
 
     for (var i = 0; i < tableHeadings.length; i++) {

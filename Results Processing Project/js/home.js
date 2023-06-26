@@ -9,6 +9,7 @@ const cardContent = document.querySelectorAll('.card-content');
 const galleryText = document.querySelectorAll('.gallery-text');
 const galleryContent = document.querySelectorAll('.gallery-content');
 
+
 //When clicked, the user can process a new result and download it as PDF file.
 processButton.addEventListener('click', function() {
     processLink.click();

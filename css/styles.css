@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Nunito;
+    transition: 0.6s ease all;
 }
 
 body {
@@ -84,11 +85,11 @@ li {
 
 .gallery-photo.show {
     opacity: 1;
-    animation: appear 0.5s linear;
+    animation: animateUp 0.4s linear;
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     animation: animateRight 0.7s linear;
@@ -152,6 +153,7 @@ li {
     font-weight: bold;
     color: #791286;
     animation: animateUp 1s linear;
+    transition: 0.6s ease all;
 }
 
 .dynamic {
@@ -189,6 +191,8 @@ li {
 .gallery-photo {
     width: 450px;
     height: 250px;
+    border-radius: 5px;
+    transition: 0.6s ease all;
 }
 
 .gallery {
@@ -198,3 +202,17 @@ li {
     row-gap: 10px;
     column-gap: 10px;
 }
+
+.menu-icon, .close-icon {
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    position: fixed;
+    right: 2rem;
+    top: 0;
+}
+

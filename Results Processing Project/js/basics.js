@@ -7,6 +7,16 @@ const termLabels = document.querySelectorAll('[term-label]');
 const basicInformation = document.querySelector('.basic-information');
 const subjectsSelection = document.querySelector('.subjects-selection');
 
+const widthSize = document.querySelector('[width-size]');
+
+widthSize.style = 'position: fixed; top: 5px;';
+widthSize.innerText = window.innerWidth;
+
+window.addEventListener('resize', function() {
+    widthSize.innerHTML = window.innerWidth;
+})
+
+
 var studentName;
 var studentClass;
 var examinationTerm;

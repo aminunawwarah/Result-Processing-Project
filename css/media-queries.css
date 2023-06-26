@@ -1,40 +1,89 @@
-@media screen and (max-width: 1000px) {
-    .gallery-photo {
-        width: 300px;
-        height: 200px;
-        display: block;
+@media screen and (max-width: 1200px) {
+    .dynamic, .dynamic-text {
+        font-size: 3rem;
     }
-
+    .my-name {
+        font-size: 3.5rem;
+    }
     .gallery {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .gallery-photo {
+        width: 550px;
+        height: 350px;
+    }
+} 
+
+@media screen and (max-width: 880px) {
+    .cover-image {
+        height: 70vh;
+    }
+    .dynamic, .dynamic-text {
+        font-size: 2.5rem;
+    }
+    .my-name {
+        font-size: 3rem;
+    }
+    .gallery-photo {
+        width: 450px;
+        height: 250px;
+    }
+    .navigations {
+        width: 70%;
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        transform: translateY(-150%);
+        padding: 1rem;
+        background: rgba(146, 73, 4, 0.74);
     }
     .navigation-links {
-        animation: none;
-        transform: translateY(-100px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
+    li {
+        margin: 1rem;
+    }
+    .link {
+        color: #EEEEEE;
+    }
+    .link:hover {
+        border-top: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    .menu-icon, .close-icon {
+        display: block;
+    }
+    .close-icon {
+        position: absolute;
+        right: 2rem;
+        top: 0;
+    }
+} 
 
-@media screen and (max-width: 700px) {
+@media  screen and (max-width: 830px) {
     .cover-image {
         height: 50vh;
     }
-    
-    .my-name {
-        font-size: 2.7rem;
-    }
-
     .dynamic, .dynamic-text {
+        font-size: 1.4rem;
+    }
+    .my-name {
         font-size: 2rem;
-        padding: 10px
     }
-
-    .pic {
-        width: 100px;
-        height: 100px;
+    #pictures {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    .js {
-        width: 150px;
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .result-details {
+        flex-direction: column;
     }
 }

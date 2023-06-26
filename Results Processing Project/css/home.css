@@ -96,47 +96,6 @@ li:hover {
     color: #27272E;
 }
 
-.cards {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 30px;
-    justify-content: space-between;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 150px;
-    border-radius: 5px;
-}
-
-.card-content {
-    border-radius: 5px;
-    width: 93%;
-    height: 93%;
-    padding: 10px;
-    transition: 0.3s ease all;
-    cursor: pointer;
-    animation: appear 0.4s linear;
-}
-.card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FFFFFF;
-    animation: animateLeft 0.6s linear;
-}
-
-.information {
-    margin-top: 10px;
-    font-size: 3rem;
-    color: #E9E9FF;
-    animation: animateDown 0.6s linear;
-}
-
 .gallery-images {
     padding: 10px;
     display: flex;
@@ -174,17 +133,15 @@ li:hover {
     animation: animateUp 0.4s linear;
 }
 
+.result-section {
+    display: flex;
+    flex-direction: column;
+}
+
 .result-details {
     display: flex;
+    justify-content: space-between;
     margin: 30px 20px;
-}
-
-.students-names {
-    width: 30%;
-}
-
-.result-show {
-    width: 70%;
 }
 
 .compute-new {

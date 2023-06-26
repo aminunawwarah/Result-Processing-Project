@@ -1,36 +1,3 @@
-/*Background colors */
-.students {
-    background: #944d23;
-}
-
-.classes {
-    background: #DF7639;
-}
-
-.subjects {
-    background: #C48532;
-}
-
-.teachers {
-    background: #815999;
-}
-
-.activities {
-    background: #663074;
-}
-
-.results {
-    background: #653FFF;
-}
-
-.labs {
-    background: #350858;
-}
-
-.awards {
-    background: #024439;
-}
-
 /*Background images */
 .one{
     background-image: url('../../imgs/enjoy.JPG');
